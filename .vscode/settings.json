@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "."
+    ],
+    "java.project.referencedLibraries": [
+        "lib\\mysql-connector-j-26.10.0.jar",
+        "c:\\Users\\aniru\\OneDrive\\Desktop\\StudentManagementSystem\\lib\\mysql-connector-j-26.10.0.jar"
+    ]
+}
