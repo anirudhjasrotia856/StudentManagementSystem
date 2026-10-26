@@ -55,8 +55,12 @@ public class Main {
         System.out.println("Student added to MySQL successfully!");
 
     } catch (SQLException e) {
+    if (e.getErrorCode() == 1062) {
+        System.out.println("Student ID already exists! Use a different ID.");
+    } else {
         System.out.println("Error adding student: " + e.getMessage());
     }
+}
 
     break;
              case 2:
