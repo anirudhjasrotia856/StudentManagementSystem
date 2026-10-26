@@ -47,7 +47,7 @@ public class Main {
                         System.out.println("No students found.");
                     } else {
                         for (Student student : students) {
-                            System.out.println("--------------------");
+                            System.out.println("--------------------"); 
                             System.out.println("ID: " + student.getId());
                             System.out.println("Name: " + student.getName());
                             System.out.println("Age: " + student.getAge());
@@ -58,12 +58,48 @@ public class Main {
                     break;
 
                 case 3:
-                    System.out.println("Search Student — next feature to implement.");
-                    break;
+                    System.out.println("Enter Search Id");
+                    int SearchId = sc.nextInt();
+                    boolean found = false;
 
-                case 4:
-                    System.out.println("Delete Student — next feature to implement.");
-                    break;
+for (Student student : students) {
+    if (student.getId() == SearchId) {
+        System.out.println("Student Found!");
+        System.out.println("ID: " + student.getId());
+        System.out.println("Name: " + student.getName());
+        System.out.println("Age: " + student.getAge());
+        System.out.println("Marks: " + student.getMarks());
+
+        found = true;
+        break;
+    }
+}
+
+if (!found) {
+    System.out.println("Student not found!");
+}
+break;
+            case 4:
+    System.out.print("Enter Delete ID: ");
+    int deleteId = sc.nextInt();
+
+    boolean found_2 = false;
+
+    for (int i = 0; i < students.size(); i++) {
+        if (students.get(i).getId() == deleteId) {
+            students.remove(i);
+            found_2 = true;
+            System.out.println("Student deleted successfully!");
+            break;
+        }
+    }
+
+    if (!found_2) {
+        System.out.println("Student not found!");
+    }
+    break;
+                   
+                   
 
                 case 5:
                     System.out.println("Exiting...");
